@@ -1,6 +1,9 @@
 name: "AWS AMPLIFY-DEV CLI"
 description: "Github Action to enable AWS Amplify-Dev CLI"
 author: "Ignazio Pollina"
+branding:
+  icon: 'upload-cloud'
+  color: 'green'
 runs:
   using: "docker"
   image: "./Dockerfile"
