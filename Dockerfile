@@ -7,6 +7,3 @@ RUN apt install -y nodejs
 RUN npm install --global yarn
 RUN git clone https://github.com/flochaz/amplify-cli.git
 RUN cd amplify-cli; yarn config set workspaces-experimental true; npm run setup-dev
-
-COPY entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
