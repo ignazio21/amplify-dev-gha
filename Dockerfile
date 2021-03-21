@@ -6,9 +6,7 @@ RUN curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash -
 RUN apt install -y nodejs
 RUN npm install --global yarn
 RUN git clone https://github.com/flochaz/amplify-cli.git
-RUN cd amplify-cli
-RUN yarn config set workspaces-experimental true
-RUN npm run setup-dev
+RUN cd amplify-cli; yarn config set workspaces-experimental true; npm run setup-dev
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
